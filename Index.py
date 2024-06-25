@@ -2,15 +2,6 @@ import re
 import string
 import secrets
 
-'''
-This project involves building a program that generates a strong password for users. The program asks users for the length and complexity of the password they want to generate.
-
-Use random module to generate a random password and conditional statements to check the complexity of the password.
-
-Allow users to specify the length and complexity of the generated password.
-'''
-
-
 def easy_password(length):
     characters = string.ascii_lowercase + string.digits
     while True:
@@ -18,7 +9,6 @@ def easy_password(length):
         if re.match(r"^[a-z0-9]{8,}$",password):
             return password
 
-    
 def medium_password(length):
     characters = string.ascii_lowercase + string.digits
     random_lower = secrets.choice(string.ascii_lowercase)
